@@ -1,0 +1,37 @@
+body{
+	margin:0;
+}
+.header{
+	height:50px;
+	text-align: center;	
+	background-color: bisque;
+	position:relative
+}
+.header_title{
+	font-size:30px;
+}
+.header_title>a{
+	text-decoration: none;
+}
+.header_tip{
+	font-size: 20px;
+	top:20%;
+    right: 5%;
+    position: absolute;
+}
+.header_tip>a:link{
+	text-decoration: none;
+	color: #ff0000;
+}
+.header_tip>a:visited {
+	text-decoration: none;
+	color: #290dfb
+	}
+.header_tip>a:hover{
+	text-decoration: none;
+	color: #202320;
+}
+.header_tip>a:active {
+	text-decoration: none;
+	color: #0000FF
+}

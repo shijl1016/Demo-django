@@ -1,0 +1,10 @@
+.footer{
+	height:50px;
+	text-align: center;	
+	background-color: bisque;
+}
+.footer_tip{
+	font-size: 20px;
+	display: inline-block;
+    margin-top: 1%;
+}

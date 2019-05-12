@@ -1,0 +1,10 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/header.css' %}">
+<div class="header">
+    <span class="header_title"><a href="{% url 'polls:index' %}">图书管理系统</a></span>
+    {% if not request.user.is_authenticated %}
+        <span class="header_tip">您还没有<a href="{% url 'polls:login' %}">登录</a></span>
+    {% else %}
+        <span class="header_tip">欢迎您，{{request.user.username}}。<a href="{% url 'polls:logout' %}">退出</a></span>
+    {% endif %}
+</div>

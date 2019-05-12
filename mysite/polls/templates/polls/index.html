@@ -1,0 +1,25 @@
+{% include "./header.html" %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/index.css' %}">
+<div class="body">
+{% if not request.user.is_authenticated %}
+    <div class="tip">您还未登录。请先登录。</div>
+{% else %}
+    {% if latest_question_list %}
+    <ul>
+        {% for question in latest_question_list %}
+            <li><a href="{% url 'polls:detail' question.id %}">{{question.question_text }}</a></li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No polls are available.</p>
+    {% endif %}
+{% endif %}
+{% lorem 2 w random %}
+{% lorem 3 p %}
+{% now "DATE_FORMAT" %}
+</div>
+
+
+{% include "./footer.html" %}
